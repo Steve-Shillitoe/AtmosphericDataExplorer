@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atmospheric Observations</title>
+</head>
+<body>
+    <h1>Atmospheric Observations</h1>
+
+    {% if observations %}
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Timestamp</th>
+            <th>Temperature (°C)</th>
+            <th>Humidity (%)</th>
+            <th>Rainfall (mm)</th>
+            <th>Radar Image</th>
+        </tr>
+        {% for o in observations %}
+        <tr>
+            <td>{{ o.timestamp }}</td>
+            <td>{{ o.temperature }}</td>
+            <td>{{ o.humidity }}</td>
+            <td>{{ o.rainfall }}</td>
+            <td>
+                {% if o.radar_image %}
+                <img src="{{ o.radar_image.url }}" width="120">
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No observations found.</p>
+    {% endif %}
+</body>
+</html>

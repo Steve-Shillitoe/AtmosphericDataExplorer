@@ -42,6 +42,16 @@
     <Compile Include="AtmosphericDataExplorer\settings.py" />
     <Compile Include="AtmosphericDataExplorer\urls.py" />
     <Compile Include="AtmosphericDataExplorer\wsgi.py" />
+    <Compile Include="observations\admin.py" />
+    <Compile Include="observations\apps.py" />
+    <Compile Include="observations\migrations\__init__.py" />
+    <Compile Include="observations\models.py" />
+    <Compile Include="observations\tests.py" />
+    <Compile Include="observations\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="observations\views.py" />
+    <Compile Include="observations\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
@@ -54,8 +64,14 @@
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
     <Folder Include="AtmosphericDataExplorer\" />
+    <Folder Include="observations\" />
+    <Folder Include="observations\migrations\" />
+    <Folder Include="observations\templates\" />
+    <Folder Include="observations\templates\observations\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="observations\templates\observations\index.html" />
+    <Content Include="observations\templates\observations\list.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
